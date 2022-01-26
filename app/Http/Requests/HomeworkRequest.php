@@ -26,7 +26,7 @@ class HomeworkRequest extends FormRequest
         return [
             'name' => 'required|string',
             'url' => 'required|url',
-            'grade' => 'integer',
+            'grade' => 'required|int|min:0|max:100',
             'message' => 'string',
         ];
     }

@@ -13,7 +13,7 @@
         <tr>
             <th>Name</th>
             <th>Url</th>
-            <th>Grade</th>
+            <th>Point</th>
             <th>Message</th>
         </tr>
     @foreach ($homeworks as $homework)

@@ -24,7 +24,7 @@ class HomeworkUpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'grade' => 'integer',
+            'grade' => 'required|int|min:0|max:100',
             'message' => 'string',
         ];
     }

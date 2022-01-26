@@ -15,10 +15,17 @@
         <div>
             Név:<br>
             <input type="text" name="name" value="{{ old('name') }}">
+            @error('name')
+                <p>{{ $message }}</p>
+            @enderror
         </div>
         <div>
             URL:<br>
             <input type="text" name="url" value="{{ old('url') }}">
+            @error('url')
+                <p>{{ $message }}</p>
+            @enderror
+
         </div>
         <div>
             <input type="submit" value="Create">

@@ -12,8 +12,11 @@
         @method('PATCH')
         @csrf
         <div>
-            Jegy:<br>
+            Pontszám:<br>
             <input type="number" name="grade" value="{{ $homework->grade }}">
+            @error('grade')
+                <p>{{ $message }}</p>
+            @enderror
         </div>
         <div>
             Szöveges értékelés:<br>
