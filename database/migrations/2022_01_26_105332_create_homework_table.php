@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateStatuesTable extends Migration
+class CreateHomeworkTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class CreateStatuesTable extends Migration
      */
     public function up()
     {
-        Schema::create('statues', function (Blueprint $table) {
+        Schema::create('homework', function (Blueprint $table) {
             $table->id();
-            $table->string('person');
-            $table->integer('height');
-            $table->integer('price');
+            $table->string('name');
+            $table->string('url');
+            $table->integer('grade')->nullable()->default(null);
+            $table->string('message')->nullable()->default(null);
             $table->timestamps();
         });
     }
@@ -29,6 +30,6 @@ class CreateStatuesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('statues');
+        Schema::dropIfExists('homework');
     }
 }

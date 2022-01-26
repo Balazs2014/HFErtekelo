@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\StatueController;
+use App\Http\Controllers\HomeworkController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,5 +17,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [ HomeController::class, 'index' ])->name('home');
 
-//Route::get('/statues', [ StatueController::class, 'index' ]);
-Route::resource('statues', StatueController::class);
+Route::resource('homeworks', HomeworkController::class);

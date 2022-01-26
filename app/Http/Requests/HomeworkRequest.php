@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class PaintingUpdateRequest extends FormRequest
+class HomeworkRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,9 +24,10 @@ class PaintingUpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'string|max:255',
-            'year' => 'numeric|integer',
-            'on_display' => 'boolean',
+            'name' => 'required|string',
+            'url' => 'required|url',
+            'grade' => 'integer',
+            'message' => 'string',
         ];
     }
 }

@@ -5,24 +5,21 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Painting extends Model
+class Homework extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'title',
-        'year',
-        'on_display',
+
+        'name',
+        'url',
+        'grade',
+        'message',
     ];
 
     protected $visible = [
         'id',
-        'title',
-        'year',
-        'on_display',
-    ];
-
-    protected $casts = [
-        'on_display' => 'boolean',
+        'grade',
+        'message',
     ];
 }

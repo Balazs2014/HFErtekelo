@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\Painting;
+use App\Models\Homework;
 use Illuminate\Database\Seeder;
 
-class PaintingSeeder extends Seeder
+class HomeworkSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,6 +14,6 @@ class PaintingSeeder extends Seeder
      */
     public function run()
     {
-        Painting::factory(10)->create();
+        Homework::factory(10)->create();
     }
 }

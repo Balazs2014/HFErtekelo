@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Museum bragging page</title>
+    <title>Giggány</title>
 </head>
 <body>
-    <h1>Welcome to the Museum home page</h1>
-    <p>Total number of paintings: {{ $paintingCount }}</p>
-    <p>Total number of statues: {{ $statueCount }}, total price: {{ $statuePrice }} Ft</p>
+    <h1>Házifeladat ellenőrző</h1>
+    <p>Beadott házifeladatok száma: {{ $homeworkCount }}</p>
     <p>
-        <a href="{{ route('statues.index') }}">Go to statue listing</a>
+        <a href="{{ route('homeworks.index') }}">Feladatok</a>
     </p>
 </body>
 </html>

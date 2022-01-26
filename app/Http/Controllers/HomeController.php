@@ -2,22 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Painting;
-use App\Models\Statue;
+use App\Models\Homework;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
 
     public function index() {
-        $paintingCount = Painting::count();
-        $statueCount = Statue::count();
-        $statuePrice = Statue::sum('price');
+        $homeworkCount = Homework::count();
+
 
         return view('stats', [
-            'paintingCount' => $paintingCount,
-            'statueCount' => $statueCount,
-            'statuePrice' => $statuePrice,
+            'homeworkCount' => $homeworkCount,
         ]);
     }
 }

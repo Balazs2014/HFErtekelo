@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StatueRequest extends FormRequest
+class HomeworkUpdateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,9 +24,8 @@ class StatueRequest extends FormRequest
     public function rules()
     {
         return [
-            'person' => 'required|min:5',
-            'height' => 'required|numeric|min:0|max:250',
-            'price' => 'required|numeric|min:1000',
+            'grade' => 'integer',
+            'message' => 'string',
         ];
     }
 }
